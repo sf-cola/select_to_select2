@@ -18,9 +18,9 @@
     });
 
     // for all elements
-    $(document).click(function(event){
-        replaceAllSelect2();
-    });
+    // $(document).click(function(event){
+    //     replaceAllSelect2();
+    // });
 
     // for all elements
     $(document).change(function(event){

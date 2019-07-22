@@ -49,7 +49,9 @@ function replaceAllSelect2(){
                 allowClear: true
             });
         }
-        else {
+        else if (elements[i].id == 'available_c' || elements[i].id == 'selected_c') {
+            //do nothing, fix incorrect display
+        } else {
             // For All Pages
             $("#" + elements[i].id).select2({
                 width:"resolve",

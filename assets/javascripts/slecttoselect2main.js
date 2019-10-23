@@ -32,7 +32,8 @@
 
 function replaceAllSelect2(){
 
-    var elements = document.getElementsByTagName("select");
+    // var elements = document.getElementsByTagName("select");
+    var elements = $("select:visible");
 
     for (i = 0; i < elements.length; i++) {
 

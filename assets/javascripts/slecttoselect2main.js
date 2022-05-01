@@ -17,10 +17,16 @@
         replaceAllSelect2();
     });
 
-    // for all elements
-    // $(document).click(function(event){
-    //     replaceAllSelect2();
-    // });
+    // for toggle multi select elements
+    $(document).on("click", function (event) {
+        // console.log('document on click:%o', event.target.classList);
+        if (
+            event.target.classList &&
+            event.target.className.includes("toggle-multiselect")
+        ) {
+            replaceAllSelect2();
+        }
+    });
 
     // for all elements
     $(document).change(function(event){

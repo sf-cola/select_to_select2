@@ -354,6 +354,11 @@ the specific language governing permissions and limitations under the Apache Lic
                 }
             });
         }
+        
+        if ($.inArray('value', replacements) >= 0) {
+            replacements.splice($.inArray('value', replacements), 1);
+        }
+        
         dest.attr("class", replacements.join(" "));
     }
 

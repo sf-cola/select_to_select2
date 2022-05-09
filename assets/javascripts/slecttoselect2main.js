@@ -17,12 +17,17 @@
         replaceAllSelect2();
     });
 
-    // for toggle multi select elements
+    // Judge and process the class name for some special buttons.
     $(document).on("click", function (event) {
-        // console.log('document on click:%o', event.target.classList);
+        /**
+         * "toggle-multiselect" is a class name of toggle multi select elements
+         * "assign-to-me-link" is a class name of assign to me link
+         */
+        // var hasClass = Array.from(event.target.classList).indexOf('name') > -1;
+
         if (
-            event.target.classList &&
-            event.target.className.includes("toggle-multiselect")
+            $(event.target).hasClass('toggle-multiselect') ||
+            $(event.target).hasClass('assign-to-me-link')
         ) {
             replaceAllSelect2();
         }

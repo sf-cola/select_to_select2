@@ -13,7 +13,8 @@
     });
 
     // For GET,POST Request
-    $(window).load(function() {
+    // For jQuery Version >= 3.6 Redmine Version 5.0.2 4.2.7 3.4.13 OK
+    $(window).on('load',function() {
         replaceAllSelect2();
     });
 

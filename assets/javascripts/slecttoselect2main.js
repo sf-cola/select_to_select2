@@ -18,10 +18,21 @@
         replaceAllSelect2();
     });
 
-    // for all elements
-    // $(document).click(function(event){
-    //     replaceAllSelect2();
-    // });
+    // Judge and process the class name for some special buttons.
+    $(document).on("click", function (event) {
+        /**
+         * "toggle-multiselect" is a class name of toggle multi select elements
+         * "assign-to-me-link" is a class name of assign to me link
+         */
+        // var hasClass = Array.from(event.target.classList).indexOf('name') > -1;
+
+        if (
+            $(event.target).hasClass('toggle-multiselect') ||
+            $(event.target).hasClass('assign-to-me-link')
+        ) {
+            replaceAllSelect2();
+        }
+    });
 
     // for all elements
     $(document).change(function(event){

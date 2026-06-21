@@ -1,3 +1,9 @@
-= select_to_select2
+= Select To Select2 Plugin
 
-Description goes here
+This repository is deprecated.
+
+Use the successor plugin instead:
+
+https://github.com/sf-cola/select_to_search
+
+Do not install select_to_select2 and select_to_search at the same time.

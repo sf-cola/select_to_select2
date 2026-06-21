@@ -1,16 +1,29 @@
 # Select To Select2 Plugin
-This is a repository of 「Select To Select2 Plugin」 which is a Redmine plugin.
 
-## Features
+This repository is deprecated.
 
-Replace all select tag to select2 in all Redmine's Pages.
+`select_to_select2` was an older Redmine plugin that replaced Redmine select boxes with Select2. For current Redmine versions, use the successor plugin instead:
 
-![2017-10-09 21 50 40](https://user-images.githubusercontent.com/12267699/31339056-998c52f0-ad3c-11e7-88ea-bc7acf8cdf96.png)
+https://github.com/sf-cola/select_to_search
 
-## Installation
+## Migration
 
-1.```$git clone https://github.com/sf-cola/select_to_select2.git```
+1. Remove the old plugin from Redmine.
 
-2.Copy to ```apps/redmine/htdocs/plugins```
+   ```sh
+   rm -rf plugins/select_to_select2
+   ```
 
-3.```bundle exec rake redmine:plugins:migrate NAME=select_to_select2 RAILS_ENV=production```
+2. Install the new plugin.
+
+   ```sh
+   git clone https://github.com/sf-cola/select_to_search.git plugins/select_to_search
+   ```
+
+3. Restart Redmine.
+
+Do not install `select_to_select2` and `select_to_search` at the same time. Both plugins target the same Redmine select elements, so running both can duplicate or break select UI initialization.
+
+## Status
+
+This repository is kept for historical reference only. New fixes and Redmine compatibility work will be handled in `select_to_search`.
